@@ -1,0 +1,16 @@
+==============================================================
+PETUNJUK CARA MENGGANTI FOTO PROFIL ADLI PHIMORRIS R.S
+==============================================================
+
+1. Siapkan foto Anda (format JPG, PNG, atau WEBP).
+2. Salin (copy) file foto Anda ke dalam folder ini:
+   C:\Users\WINDOWS\company-profile-web\assets\images\
+
+3. Ubah nama (rename) file foto tersebut menjadi salah satu nama berikut:
+   - foto-profil.jpg  (direkomendasikan)
+   - foto-profil.png
+   - foto-profil.jpeg
+
+4. Setelah itu, buka atau refresh halaman website Anda di browser.
+   Foto Anda akan langsung muncul di Halaman Utama, Halaman Profil, dan Halaman Kontak secara otomatis!
+==============================================================

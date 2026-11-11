@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADLI PHIMORRIS R.S | Profil Siswa TKJ & Portofolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-blue-yellow-gradient text-slate-800 antialiased flex flex-col min-h-screen relative selection:bg-blue-200 selection:text-blue-900">
+
+  <!-- Ambient Blue & Yellow Light Accents -->
+  <div class="bg-ambient-1"></div>
+  <div class="bg-ambient-2"></div>
+  <div class="bg-ambient-3"></div>
+
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Personal Brand Logo (Animated & Interactive) -->
+        <a href="index.html" class="flex items-center gap-3.5 group/logo relative select-none" title="Klik untuk memicu hujan meteor!">
+          <div class="relative w-11 h-11 flex items-center justify-center">
+            <!-- Animated Orbit Ring & Particle -->
+            <div class="logo-orbit-ring absolute inset-0 rounded-2xl border border-indigo-400/40 pointer-events-none">
+              <span class="logo-orbit-dot"></span>
+            </div>
+            
+            <!-- Floating Glowing Emblem -->
+            <div class="logo-moving-emblem w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-600 via-indigo-700 to-sky-500 flex items-center justify-center text-white font-black text-xl shadow-lg relative overflow-hidden cursor-pointer">
+              <!-- Shimmer light sweep -->
+              <span class="logo-shimmer"></span>
+              <!-- Emblem Text -->
+              <span class="relative z-10 tracking-wider">A</span>
+              <!-- Mini corner sparkle -->
+              <span class="logo-corner-sparkle absolute top-1 right-1 text-[9px] text-amber-200">✦</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-xl font-extrabold tracking-tight text-slate-900 group-hover/logo:text-indigo-600 transition-colors">ADLI PHIMORRIS R.S</span>
+              <span class="inline-block w-2 h-2 rounded-full bg-indigo-500 animate-ping" title="Aktif"></span>
+            </div>
+            <span class="block text-[10px] font-bold text-indigo-600 uppercase tracking-widest">Siswa SMK Telkom Malang</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-1 bg-slate-100/70 p-1.5 rounded-full border border-slate-200/60">
+          <a href="index.html" class="px-5 py-2 rounded-full text-xs font-bold text-indigo-700 bg-white shadow-sm transition-all">Utama</a>
+          <a href="profile.html" class="px-5 py-2 rounded-full text-xs font-semibold text-slate-600 hover:text-slate-900 transition-colors">Tentang Saya</a>
+          <a href="contact.html" class="px-5 py-2 rounded-full text-xs font-semibold text-slate-600 hover:text-slate-900 transition-colors">Kontak</a>
+          <a href="profile.html#portfolio" class="px-5 py-2 rounded-full text-xs font-semibold text-blue-600 hover:text-blue-800 transition-colors">Portofolio TKJ</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="profile.html#portfolio" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-slate-900 hover:bg-indigo-600 shadow-sm transition-all active:scale-95">
+            Lihat Portofolio
+            <svg class="w-3.5 h-3.5 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex md:hidden">
+          <button id="mobileMenuBtn" type="button" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Buka Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-slate-200 bg-white/95 px-4 pt-3 pb-5 space-y-2">
+      <a href="index.html" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-indigo-600 bg-indigo-50">Utama</a>
+      <a href="profile.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Tentang Saya</a>
+      <a href="contact.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Kontak</a>
+      <a href="profile.html#portfolio" class="block px-3 py-2.5 rounded-lg text-base font-medium text-blue-600 hover:bg-blue-50">Portofolio TKJ</a>
+      <div class="pt-2">
+        <a href="contact.html" class="block w-full text-center px-4 py-2.5 rounded-xl text-sm font-semibold text-white bg-slate-900 hover:bg-indigo-600">
+          Kirim Pesan
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section: Personal Introduction -->
+  <main class="flex-grow">
+    <section class="relative pt-12 pb-20 sm:pt-20 sm:pb-28">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Left Column: Personal Introduction Info -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-blue-50 border border-blue-200 text-blue-700">
+              <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+              Siswa SMK TELKOM MALANG • Jurusan Teknik Komputer Jaringan
+            </div>
+
+            <div class="space-y-3">
+              <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-indigo-600">Profil Pribadi</p>
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+                Halo, saya <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-indigo-800">ADLI PHIMORRIS R.S</span>.
+              </h1>
+              <p class="text-xl sm:text-2xl font-medium text-slate-700">
+                Siswa TKJ • Pengembang Web Antigravity & Konfigurasi MikroTik.
+              </p>
+            </div>
+
+            <p class="text-base text-slate-600 max-w-xl leading-relaxed">
+              Saya mendalami rekayasa jaringan komputer, konfigurasi perangkat MikroTik RouterOS, serta berfokus merancang antarmuka website modern, berdaya guna tinggi, dan ringan dengan memanfaatkan teknologi <strong>Antigravity</strong>.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="pt-3 flex flex-wrap items-center gap-4">
+              <a href="profile.html" class="px-6 py-3.5 rounded-xl text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-200 transition-all">
+                Mengenal Diri Saya Lebih Dekat
+              </a>
+              <a href="contact.html" class="px-6 py-3.5 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 hover:border-slate-400 transition-all">
+                Kirim Pesan / Kontak
+              </a>
+            </div>
+
+            <!-- Focus Highlights -->
+            <div class="pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-6 max-w-lg">
+              <div>
+                <p class="text-2xl font-extrabold text-slate-900">Modern</p>
+                <p class="text-xs text-slate-500 font-medium mt-0.5">Pendekatan Desain</p>
+              </div>
+              <div>
+                <p class="text-2xl font-extrabold text-slate-900">Efisien</p>
+                <p class="text-xs text-slate-500 font-medium mt-0.5">Arsitektur Kode</p>
+              </div>
+              <div>
+                <p class="text-2xl font-extrabold text-slate-900">Vercel</p>
+                <p class="text-xs text-slate-500 font-medium mt-0.5">Deployment Mulus</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Dedicated Student Profile Photo Frame -->
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="w-full max-w-sm">
+              <div class="relative bg-white/90 backdrop-blur-md p-5 rounded-3xl border-2 border-blue-200/90 shadow-xl shadow-blue-200/30">
+                
+                <!-- Main Profile Photo with Frame -->
+                <div class="profile-avatar-frame rounded-2xl overflow-hidden aspect-[4/5] bg-slate-100 relative group">
+                  <img 
+                    id="mainProfileDisplay"
+                    src="assets/images/foto-profil.jpg" 
+                    alt="Foto Resmi Profil Siswa - SMK Telkom Malang" 
+                    class="user-profile-img w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  
+                  <!-- Floating Badge on Photo -->
+                  <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md rounded-xl p-3 border border-white/60 shadow-md">
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <h3 class="text-xs font-bold text-slate-900">ADLI PHIMORRIS R.S</h3>
+                        <p class="text-[11px] text-blue-600 font-semibold">SMK Telkom Malang • TKJ</p>
+                      </div>
+                      <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
+                        Profil Siswa
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Static Official Verification Badge (Tanpa Tombol Unggah Bebas) -->
+                <div class="mt-4 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="text-xs font-bold text-slate-800">Profil Terverifikasi</span>
+                  </div>
+                  <span class="text-[11px] font-semibold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200">
+                    Siswa Aktif TKJ
+                  </span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Pillars / Keahlian Pribadi -->
+    <section class="py-16 bg-gradient-to-r from-blue-50/70 via-amber-50/60 to-blue-50/70 backdrop-blur-sm border-y border-blue-200/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">
+            Fokus & Disiplin Kerja
+          </span>
+          <h2 class="mt-3 text-3xl font-extrabold text-slate-900 tracking-tight">Keahlian yang Saya Kembangkan</h2>
+          <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+            Menghadirkan perpaduan harmonis antara logika teknis, kecepatan eksekusi, dan nilai estetika desain.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Pillar 1: Kolom Warna Biru -->
+          <div class="bg-gradient-to-b from-blue-50/90 to-white border-2 border-blue-200/90 rounded-2xl p-7 card-hover-effect shadow-sm hover:border-blue-400">
+            <div class="w-11 h-11 rounded-xl bg-blue-600 text-white flex items-center justify-center mb-5 font-bold shadow-md shadow-blue-200">
+              01
+            </div>
+            <div class="inline-block px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 text-blue-800 mb-2">Kolom Biru</div>
+            <h3 class="text-lg font-bold text-blue-950 mb-2">Desain Antarmuka Elegan</h3>
+            <p class="text-xs sm:text-sm text-blue-900/80 leading-relaxed">
+              Mengutamakan kesederhanaan, palet warna terang yang ramah mata, serta tata letak tipografi yang memudahkan pembaca memahami pesan secara instan.
+            </p>
+          </div>
+
+          <!-- Pillar 2: Kolom Warna Kuning -->
+          <div class="bg-gradient-to-b from-amber-50/90 to-white border-2 border-amber-200/90 rounded-2xl p-7 card-hover-effect shadow-sm hover:border-amber-400">
+            <div class="w-11 h-11 rounded-xl bg-amber-500 text-slate-900 flex items-center justify-center mb-5 font-bold shadow-md shadow-amber-200">
+              02
+            </div>
+            <div class="inline-block px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-900 mb-2">Kolom Kuning</div>
+            <h3 class="text-lg font-bold text-amber-950 mb-2">Arsitektur Web Ringan</h3>
+            <p class="text-xs sm:text-sm text-amber-900/80 leading-relaxed">
+              Membangun kode dengan struktur modular, HTML semantik, Tailwind CSS yang teroptimasi, dan performa tinggi tanpa dependensi berlebih.
+            </p>
+          </div>
+
+          <!-- Pillar 3: Kolom Warna Biru Sky -->
+          <div class="bg-gradient-to-b from-sky-50/90 to-white border-2 border-sky-200/90 rounded-2xl p-7 card-hover-effect shadow-sm hover:border-sky-400">
+            <div class="w-11 h-11 rounded-xl bg-sky-600 text-white flex items-center justify-center mb-5 font-bold shadow-md shadow-sky-200">
+              03
+            </div>
+            <div class="inline-block px-2 py-0.5 rounded-full text-[10px] font-bold bg-sky-100 text-sky-800 mb-2">Kolom Biru Sky</div>
+            <h3 class="text-lg font-bold text-sky-950 mb-2">Kesiapan Cloud & Vercel</h3>
+            <p class="text-xs sm:text-sm text-sky-900/80 leading-relaxed">
+              Memastikan setiap aset dan berkas konfigurasi siap dipublikasikan ke jaringan global Vercel secara mulus dengan waktu pemuatan ultra-cepat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase / Pengalaman Karya Singkat (Proyek Teknik Komputer & Jaringan) -->
+    <section class="py-20 bg-gradient-to-b from-transparent via-amber-50/30 to-transparent">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">
+              Sorotan Proyek TKJ
+            </span>
+            <h2 class="mt-3 text-3xl font-extrabold text-slate-900 tracking-tight">Proyek Teknik Komputer & Jaringan</h2>
+          </div>
+          <p class="mt-3 md:mt-0 text-xs sm:text-sm text-slate-500 max-w-sm">
+            Eksplorasi infrastruktur jaringan komputer, instalasi kabel data & fiber optic, routing switching, dan administrasi server.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Card 1: Infrastruktur Jaringan & Switch -->
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 card-hover-effect space-y-4 flex flex-col justify-between">
+            <div>
+              <div class="h-48 rounded-xl overflow-hidden relative group">
+                <img 
+                  src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" 
+                  alt="Ilustrasi Switch Jaringan dan Kabel Ethernet RJ45 - TKJ" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent flex items-end p-4">
+                  <span class="text-xs font-bold text-white bg-blue-600/90 px-3 py-1 rounded-full backdrop-blur-sm border border-blue-400/40">
+                    Routing & Switching Enterprise
+                  </span>
+                </div>
+              </div>
+              <div class="pt-4">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-[11px] font-bold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-200">Infrastruktur LAN & VLAN</span>
+                  <span class="text-[11px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">MikroTik & Cisco</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-900">Perancangan Topologi Jaringan & Multi-VLAN</h3>
+                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                  Implementasi jaringan komputer sekolah/perusahaan dengan segmentasi VLAN (802.1Q), Inter-VLAN routing, DHCP Server, serta manajemen bandwidth cerdas berbasis QoS MikroTik.
+                </p>
+              </div>
+            </div>
+            <div class="pt-2 flex items-center gap-2">
+              <span class="text-[10px] font-semibold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md">Packet Tracer</span>
+              <span class="text-[10px] font-semibold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md">VLAN 802.1Q</span>
+              <span class="text-[10px] font-semibold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md">Queue Tree QoS</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Server Administrasi & Data Center -->
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 card-hover-effect space-y-4 flex flex-col justify-between">
+            <div>
+              <div class="h-48 rounded-xl overflow-hidden relative group">
+                <img 
+                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" 
+                  alt="Ilustrasi Rak Server Data Center - TKJ" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent flex items-end p-4">
+                  <span class="text-xs font-bold text-white bg-amber-600/90 px-3 py-1 rounded-full backdrop-blur-sm border border-amber-400/40">
+                    Server & Cloud Administration
+                  </span>
+                </div>
+              </div>
+              <div class="pt-4">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-[11px] font-bold text-amber-800 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200">Administrasi Server</span>
+                  <span class="text-[11px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">Linux Debian/Ubuntu</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-900">Konfigurasi Server Layanan Jaringan & Virtualisasi</h3>
+                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                  Pembangunan server lokal berbasis Linux yang melayani DNS (BIND9), Web Server Nginx, Database MariaDB, FTP, serta virtualisasi mesin Proxmox VE dengan proteksi firewall IPTables.
+                </p>
+              </div>
+            </div>
+            <div class="pt-2 flex items-center gap-2">
+              <span class="text-[10px] font-semibold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md">Ubuntu Server</span>
+              <span class="text-[10px] font-semibold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md">BIND9 DNS</span>
+              <span class="text-[10px] font-semibold bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md">Proxmox VE</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <a href="profile.html#portfolio" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 transition-colors">
+            Lihat seluruh portofolio proyek Teknik Komputer & Jaringan
+            <svg class="w-3.5 h-3.5 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Quote / Philosophy Section -->
+    <section class="py-16 bg-gradient-to-b from-transparent via-blue-50/40 to-transparent border-t border-blue-200/50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-blue-50/90 via-white/85 to-amber-50/90 backdrop-blur-md border border-blue-200/80 shadow-md relative">
+          <svg class="w-10 h-10 text-indigo-200 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+          </svg>
+          <blockquote class="text-base sm:text-lg font-medium text-slate-800 leading-relaxed max-w-2xl mx-auto">
+            "Karya digital yang baik tidak diukur dari seberapa rumit kodenya, melainkan dari seberapa mudah ia dipahami dan seberapa besar manfaat yang ia berikan bagi yang menggunakannya."
+          </blockquote>
+          <p class="mt-4 text-xs font-bold uppercase tracking-wider text-indigo-600">— ADLI PHIMORRIS R.S</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Strictly without phone, physical address, or email) -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-8 border-b border-slate-800">
+        
+        <!-- Left: Brand Info -->
+        <div class="md:col-span-6 space-y-2">
+          <div class="flex items-center gap-3">
+            <div class="logo-moving-emblem w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-sky-400 text-white flex items-center justify-center font-bold text-base shadow-md relative overflow-hidden">
+              <span class="logo-shimmer"></span>
+              <span class="relative z-10">A</span>
+              <span class="logo-corner-sparkle absolute top-0.5 right-0.5 text-[8px] text-amber-200">✦</span>
+            </div>
+            <span class="text-lg font-bold text-white tracking-tight">ADLI PHIMORRIS R.S</span>
+          </div>
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Profil pengenalan diri & karya digital independen berstandar modern. Mengedepankan estetika bersih, kecepatan, dan kenyamanan pengguna.
+          </p>
+        </div>
+
+        <!-- Right: Fast Links -->
+        <div class="md:col-span-6 flex flex-wrap md:justify-end gap-6 text-xs font-semibold">
+          <a href="index.html" class="text-slate-300 hover:text-white transition-colors">Utama</a>
+          <a href="profile.html" class="text-slate-300 hover:text-white transition-colors">Tentang Saya</a>
+          <a href="contact.html" class="text-slate-300 hover:text-white transition-colors">Kontak</a>
+          <a href="profile.html#portfolio" class="text-slate-300 hover:text-white transition-colors">Portofolio TKJ</a>
+          <span class="text-emerald-400 text-xs px-2.5 py-1 rounded-full bg-emerald-950/60 border border-emerald-800/80">
+            ● Status: Terbuka untuk Kolaborasi
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Vercel deployment tag -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>&copy; <span class="current-year"></span> ADLI PHIMORRIS R.S. Seluruh hak cipta dilindungi.</p>
+        <p class="inline-flex items-center gap-1.5">
+          <span>Siap di-*deploy* di</span>
+          <span class="font-semibold text-slate-300">Vercel</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
